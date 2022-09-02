@@ -18,7 +18,7 @@ def pix(path):
     height = int(img.shape[0])
     dim = (width, height)
 
-    resized = cv.resize(pixel, dim, interpolation = cv.INTER_AREA)
+    resized = cv.resize(pixel, dim, interpolation=cv.INTER_AREA)
 
 
     cv.imshow('Pixel', resized)

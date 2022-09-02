@@ -8,7 +8,8 @@ def thresholding(img):
     ret, thresh3 = cv.threshold(img, 127, 255, cv.THRESH_TRUNC)
     ret, thresh4 = cv.threshold(img, 127, 255, cv.THRESH_TOZERO)
     ret, thresh5 = cv.threshold(img, 127, 255, cv.THRESH_TOZERO_INV)
-    titles = ['Original Image', 'BINARY', 'BINARY_INV', 'TRUNC', 'TOZERO', 'TOZERO_INV']
+    titles = ['Original Image', 'Binary thresholding', 'Binary inverted', 'Truncated',
+              'To zero', 'To zero inverted']
     images = [img, thresh1, thresh2, thresh3, thresh4, thresh5]
 
     for i in range(6):

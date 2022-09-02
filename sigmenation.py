@@ -11,7 +11,7 @@ def sigm(img):
     mask = cv.inRange(hsv_img, light_orange, dark_orange)
 
     result = cv.bitwise_and(img, img, mask=mask)
-    cv.imshow('result', result)
+    cv.imshow('sigmenation', result)
 
 
 

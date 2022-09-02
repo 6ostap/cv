@@ -12,12 +12,16 @@ from morphological import erosion, dilation, opening, close, grad, tophat, black
 path = sys.argv[1]
 img = cv.imread(path)
 
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+cv.imshow('original', img)
+cv.waitKey(0)
 
 pix(path)
 
 convertToBlackAndWhite(img, path)
 
-histEqual(img)
+histEqual(img, path)
 
 sigm(img)
 
@@ -25,16 +29,16 @@ thresholding(img)
 
 # Morphological Transformations
 
-erosion(img)
+erosion(gray)
 
-dilation(img)
+dilation(gray)
 
-opening(img)
+opening(gray)
 
-close(img)
+close(gray)
 
-grad(img)
+grad(gray)
 
-tophat(img)
+tophat(gray)
 
-blackHat(img)
+blackHat(gray)
