@@ -13,6 +13,8 @@ path = sys.argv[1]
 img = cv.imread(path)
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+(thresh, blackAndWhite) = cv.threshold(gray, 127, 255, cv.THRESH_BINARY)
+
 
 cv.imshow('original', img)
 cv.waitKey(0)
@@ -29,16 +31,16 @@ thresholding(img)
 
 # Morphological Transformations
 
-erosion(gray)
+erosion(blackAndWhite)
 
-dilation(gray)
+dilation(blackAndWhite)
 
-opening(gray)
+opening(blackAndWhite)
 
-close(gray)
+close(blackAndWhite)
 
-grad(gray)
+grad(blackAndWhite)
 
-tophat(gray)
+tophat(blackAndWhite)
 
-blackHat(gray)
+blackHat(blackAndWhite)
